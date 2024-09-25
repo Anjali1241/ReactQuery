@@ -7,4 +7,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-another Video of react Query-https://www.youtube.com/watch?v=8K1N3fE-cDs
+another Video of react Query-[https://www.youtube.com/watch?v=8K1N3fE-cDs, https://www.youtube.com/watch?v=jnIPUkNOJ9A]
