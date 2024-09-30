@@ -1,6 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
-import { keepPreviousData, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import {
+  keepPreviousData,
+  useMutation,
+  useQuery,
+  useQueryClient,
+} from "@tanstack/react-query";
 import { addPost, fetchPosts, fetchTags } from "../api/api";
 import { useState } from "react";
 
@@ -35,8 +40,8 @@ function PostList() {
   } = useMutation({
     mutationFn: addPost,
     // onMutate runs before the  mutate has happenend
-    onMutate: ({id,title,tags}) => {
-      return { id ,title,tags};
+    onMutate: ({ id, title, tags }) => {
+      return { id, title, tags };
     },
     // runs after the mutation has happened
     onSuccess: (data, variable, context) => {
@@ -47,8 +52,6 @@ function PostList() {
           query.queryKey[0] === "posts" && query.queryKey[1].page >= 2,
       });
     },
-    // onError: (error, variables, context) => {},
-    // onSettled: (data, error, variables, context) => {},
   });
 
   const handleSubmit = (e) => {
@@ -58,7 +61,7 @@ function PostList() {
     const tags = Array.from(formData.keys()).filter(
       (key) => formData.get(key) === "on"
     );
-    console.log(title,tags)
+    console.log(title, tags);
     if (!title || !tags)
       return mutate({ id: postData?.data?.length + 1, title, tags });
     e.target.reset();
